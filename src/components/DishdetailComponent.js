@@ -49,11 +49,12 @@ function   RenderDish({dish}) {
             return (<div></div>)
         }
         return (
+            <div className="container">
                 <div className="row">
                     <RenderDish dish={props.dish}/>
                     <RenderComment comment={props.dish.comments}/>
                 </div>
-                
+                </div>
         );
       }
 export default DishDetail;
