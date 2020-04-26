@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DishDetail from "./DishdetailComponent";
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 /***
  * this component is basically rendering the whole content of the class.
@@ -7,21 +6,7 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
  * 1) here a state selectedDish is defined and te data null is passed
  */
   class Menu extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            selectedDish: null,
-            comments:null
-        }
-    }
-
-    onDishSelect(dish,cmt) {
-        this.setState({ selectedDish: dish});
-        this.setState({comments:cmt});
-    }
-    
+        
     render() {
         const menu = this.props.dishes.map((dish) => {
             return (
@@ -42,7 +27,6 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
                 <div className="row">
                     {menu}
                 </div>
-                    <DishDetail dish={this.state.selectedDish} comments={this.state.comments}/>
             </div>
         );
     }
