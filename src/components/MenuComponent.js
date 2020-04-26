@@ -27,7 +27,7 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
             return (
               <div  className="col-12 col-md-5 m-1">
                 <Card key={dish.id}
-                  onClick={() => this.onDishSelect(dish,dish.comments)}>
+                        onClick={() => this.props.onClick(dish.id)}>
                   <CardImg width="100%" src={dish.image} alt={dish.name} />
                   <CardImgOverlay>
                       <CardTitle>{dish.name}</CardTitle>
